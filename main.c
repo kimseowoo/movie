@@ -66,7 +66,9 @@ int main(int argc, char *argv[]) {
 				break;
 				
 			case 2: //print movies of specific country
-				//2.3.1 get country name to search for
+				printf("--select a country : ");
+				scanf("%s",country);
+				printf("-----------------------");	//2.3.1 get country name to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
@@ -81,7 +83,9 @@ int main(int argc, char *argv[]) {
 				break;
 				
 			case 3:
-				//2.4.1 get minimal runtime value to search for
+				printf("--select minimal runtime : ");
+				scanf("%d",runtime);
+				printf("-----------------------");//2.4.1 get minimal runtime value to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
