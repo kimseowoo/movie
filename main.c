@@ -100,7 +100,9 @@ int main(int argc, char *argv[]) {
 				break;
 				
 			case 4:
-				//2.5.1 get minimal score value to search for
+				printf("--select a minimal score : ");
+				scanf("%f",score);
+				printf("-----------------------");//2.5.1 get minimal score value to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
