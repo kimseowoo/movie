@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "movie_ref.h"
 #include "linkedList_ref.h"
 #include "linkdeList.h"
 
@@ -25,7 +24,7 @@ int main(int argc, char *argv[]) {
 	fp = fopen("movie.dat","r");//1.1 FILE open
 	
 	//1.2 list generation (use function list_genList() )
-	list = list_genList();
+	list = list_genList(*fp);
 	
 	//1.3 read each movie data from the file and add it to the linked list
 	while ( /* read name, country, runtime and score*/ )
@@ -39,13 +38,13 @@ int main(int argc, char *argv[]) {
 	//2. program start
 	while(exit_flag == 0) 
 	{
-		printf("Menu\n");
+		printf("-------------------Menu-------------------\n");
 		printf("1.print all the movies\n");
 		printf("2.search for specific country movies\n");
 		printf("3.search for specific runtime movies\n");
 		printf("4.search for specific score movies\n");
 		printf("5.exit\n");
-		printf("Menu\n\n");
+		printf("-------------------Menu-------------------\n\n");
 		printf("--select an option : ");
 		scanf("%d",&option);			//2.1 print menu message and get input option
 		
@@ -68,7 +67,7 @@ int main(int argc, char *argv[]) {
 			case 2: //print movies of specific country
 				printf("--select a country : ");
 				scanf("%s",country);
-				printf("-----------------------");	//2.3.1 get country name to search for
+				printf("--------------------------");	//2.3.1 get country name to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
@@ -85,7 +84,7 @@ int main(int argc, char *argv[]) {
 			case 3:
 				printf("--select minimal runtime : ");
 				scanf("%d",runtime);
-				printf("-----------------------");//2.4.1 get minimal runtime value to search for
+				printf("--------------------------");//2.4.1 get minimal runtime value to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
@@ -102,7 +101,7 @@ int main(int argc, char *argv[]) {
 			case 4:
 				printf("--select a minimal score : ");
 				scanf("%f",score);
-				printf("-----------------------");//2.5.1 get minimal score value to search for
+				printf("--------------------------");//2.5.1 get minimal score value to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
