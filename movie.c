@@ -14,25 +14,13 @@ typedef struct movInfo{
 void* mv_genMvInfo(char* name, float score, int runTime, char* country)
 {
 	movInfo_t* mvPtr; // 구조체 포인터 선언
-	int i;
-	
-	mvPtr = ()
-	while (mvPtr!=NULL)
-	{
-		i++;
-		if(i==n)
-		{
-			printf("Name : %s(%s)\n running time : %d, score: %f",name, madeIn, runTime, score);
-			//영화정보출력 
-			break;
-		}
-		mvPtr = mvPtr ->next;
-	}
 	
 	
+	mvPtr = (movInfo_t*)malloc(sizeof(movInfo_t));//allocate memory and set the member variables
+
+
 	
-	//allocate memory and set the member variables
-	
+		
 	return (void*)mvPtr;
 }
 
@@ -73,6 +61,7 @@ char* mv_getName(void* obj)
 //return the country string pointer from the input instance of movInfo_t structure
 char* mv_getCountry(void* obj)
 {
+	
 	
 }
 

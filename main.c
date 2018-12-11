@@ -54,20 +54,28 @@ int main(int argc, char *argv[]) {
 				printf("printing all the movies in the list.....\n\n\n");
 				
 				ndPtr = list;
-				while (*ndPtr!==EOF/* repeat until the ndPtr points to the end node */)
+				while (/* repeat until the ndPtr points to the end node */)
 				{
 					//2.2 print a movie data : use functions of movie.c and linkedList.c
 					//ndPtr = the next node of the ndPtr;
 					//get object of ndPtr to mvInfo void pointer
-					printf("%s",mvInfo);//print the contents of the mvInfo
+					//print the contents of the mvInfo
 				}
 				
 				break;
 				
 			case 2: //print movies of specific country
+
+				fp = fopen("movie.dat","r");
+
 				printf("--select a country : ");
 				scanf("%s",country);
-				printf("--------------------------");	//2.3.1 get country name to search for
+				printf("--------------------------");
+
+				while (fgets(country, 10,fp)!=NULL)
+				{
+					if(strcmp(country, ))
+				}	//2.3.1 get country name to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
