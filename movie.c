@@ -8,12 +8,28 @@ typedef struct movInfo{
 	float score;
 	int runTime;
 	char madeIn[10];
-} movInfo_t;
+} movInfo_t;				//movInfo 구조체 변수 선언 
 
 
 void* mv_genMvInfo(char* name, float score, int runTime, char* country)
 {
-	movInfo_t* mvPtr;
+	movInfo_t* mvPtr; // 구조체 포인터 선언
+	int i;
+	
+	mvPtr = ()
+	while (mvPtr!=NULL)
+	{
+		i++;
+		if(i==n)
+		{
+			printf("Name : %s(%s)\n running time : %d, score: %f",name, madeIn, runTime, score);
+			//영화정보출력 
+			break;
+		}
+		mvPtr = mvPtr ->next;
+	}
+	
+	
 	
 	//allocate memory and set the member variables
 	

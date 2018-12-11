@@ -54,12 +54,12 @@ int main(int argc, char *argv[]) {
 				printf("printing all the movies in the list.....\n\n\n");
 				
 				ndPtr = list;
-				while (/* repeat until the ndPtr points to the end node */)
+				while (*ndPtr!==EOF/* repeat until the ndPtr points to the end node */)
 				{
 					//2.2 print a movie data : use functions of movie.c and linkedList.c
 					//ndPtr = the next node of the ndPtr;
 					//get object of ndPtr to mvInfo void pointer
-					//print the contents of the mvInfo
+					printf("%s",mvInfo);//print the contents of the mvInfo
 				}
 				
 				break;
