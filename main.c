@@ -19,6 +19,7 @@ int main(int argc, char *argv[]) {
 	void *list, *mvInfo; //pointers for linked list and a specific structure instance for a movie data
 	void *ndPtr; //void pointer for linked list node
 	
+	int input;
 	
 	//1. reading the movie.dat-----------------------------
 	fp = fopen("movie.dat","r");//1.1 FILE open
@@ -54,9 +55,9 @@ int main(int argc, char *argv[]) {
 				printf("printing all the movies in the list.....\n\n\n");
 				
 				ndPtr = list;
-				while (/* repeat until the ndPtr points to the end node */)
+				while (ndPtr==NULL/* repeat until the ndPtr points to the end node */)
 				{
-					//2.2 print a movie data : use functions of movie.c and linkedList.c
+					mv_print(void* obj);//2.2 print a movie data : use functions of movie.c and linkedList.c
 					//ndPtr = the next node of the ndPtr;
 					//get object of ndPtr to mvInfo void pointer
 					//print the contents of the mvInfo
@@ -66,16 +67,10 @@ int main(int argc, char *argv[]) {
 				
 			case 2: //print movies of specific country
 
-				fp = fopen("movie.dat","r");
-
 				printf("--select a country : ");
-				scanf("%s",country);
+				scanf("%s",input);
 				printf("--------------------------");
-
-				while (fgets(country, 10,fp)!=NULL)
-				{
-					if(strcmp(country, ))
-				}	//2.3.1 get country name to search for
+					//2.3.1 get country name to search for
 				
 				ndPtr = list;
 					while (/* repeat until the ndPtr points to the end node */)
@@ -91,7 +86,7 @@ int main(int argc, char *argv[]) {
 				
 			case 3:
 				printf("--select minimal runtime : ");
-				scanf("%d",runtime);
+				scanf("%d",input);
 				printf("--------------------------");//2.4.1 get minimal runtime value to search for
 				
 				ndPtr = list;
@@ -108,7 +103,7 @@ int main(int argc, char *argv[]) {
 				
 			case 4:
 				printf("--select a minimal score : ");
-				scanf("%f",score);
+				scanf("%f",input);
 				printf("--------------------------");//2.5.1 get minimal score value to search for
 				
 				ndPtr = list;

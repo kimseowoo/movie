@@ -61,8 +61,18 @@ char* mv_getName(void* obj)
 //return the country string pointer from the input instance of movInfo_t structure
 char* mv_getCountry(void* obj)
 {
+	fp = fopen("movie.dat","r");
+ 516ÂÊ  
+
+	while (fgets(country, 10,fp)!=NULL)
+	{
+		if(strcmp(input, county)==0)
+		{
+			printf("")
+		}
 	
-	
+	}
 }
+
 
 
