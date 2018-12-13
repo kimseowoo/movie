@@ -43,26 +43,52 @@ void mv_print(void* obj)
 //return the score value from the input instance of movInfo_t structure
 float mv_getScore(void* obj)
 {
+	fp = fopen("movie.dat","r");  
+
+	while (fgets(score, 10,fp)!=NULL)
+	{
+		if(strcmp(input, score)==0)
+		{
+			printf("")
+		}
 	
+	}
 }
 
 //return the runtime value from the input instance of movInfo_t structure
 int mv_getRunTime(void* obj)
 {
+	fp = fopen("movie.dat","r");  
+
+	while (fgets(runtime,10,fp)!=NULL)
+	{
+		if(strcmp(input, runtime)==0)
+		{
+			printf("")
+		}
 	
+	}
 }
 
 //return the name string pointer from the input instance of movInfo_t structure
 char* mv_getName(void* obj)
 {
+	fp = fopen("movie.dat","r"); 
+
+	while (fgets(name, 100,fp)!=NULL)
+	{
+		if(strcmp(input, name)==0)
+		{
+			printf("")
+		}
 	
+	}
 }
 
 //return the country string pointer from the input instance of movInfo_t structure
 char* mv_getCountry(void* obj)
 {
-	fp = fopen("movie.dat","r");
- 516ÂÊ  
+	fp = fopen("movie.dat","r"); 
 
 	while (fgets(country, 10,fp)!=NULL)
 	{
